@@ -9,29 +9,24 @@ void findJumps(int, int);
 // X : number on which we have to reach
 void findJumps(int N, int X){
     
-    int i, minJumps, m1=0, m2=0, count=0;
+    int i, minJumps, m1=0, m2=0;
     
-    if(X==1 || X==N) {
-        minJumps = 0;
-        cout<<minJumps<<endl;
-        return;
+    m1=(X/2)+1;
+    m2=(N/2)+1;
+
+    if(m2-m1 < m1) {
+        minJumps = m2-m1;
     }
-    
     else {
-        for(i=2; i<N ; i+2) {
-            count++;
-            if(i==X || (i+1)==X) {
-                m1=count;
-                break;
-            }
-        }        
-        m2 = (N/2) - m1;        
-        minJumps = (m1<=m2)?m1:m2;
+        minJumps = m1-1;
     }
+    
     cout<<minJumps;
     cout << endl;
     
 }
+
+// { Driver Code Starts.
 
 int main(){
     
