@@ -1,3 +1,7 @@
+//This is the optimized version with T(n)=O((m+n)log n)
+//Expected Time Complexity: O((m + n) * log n).
+//Expected Auxiliary Space: O(1).
+
 // C++ implementation of For each element in 1st 
 // array count elements less than or equal to it
 // in 2nd array
