@@ -1,9 +1,15 @@
-#include<iostream>
+#include <iostream>
+#include <cmath>
 using namespace std;
 int c = 0;
 void checkPrime(int n) {
 
-	for(int i = 2; i < n/2; i++) {
+    if(n<2) {
+        cout<<"Neither prime nor composite";
+        return;
+    }
+
+	for(int i = 2; i <= sqrt(n); i++) {
 		if(n % 2 == 0) {
 			c = 1;
 			break;
